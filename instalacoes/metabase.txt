@@ -1,0 +1,27 @@
+#Metabase documentação, nela não contem forma de fazer a instalação por docker compose, pegar um docker compose qualquer e montar a estrutura para não montar container solto
+https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker
+
+
+
+version: "3"
+services:
+
+  metabase-app:
+    image: metabase/metabase
+    restart: always
+    ports:
+      - "3000:3000"    
+    volumes:
+       - /home/app/metabase-data:/metabase-data
+
+
+#entrar na pasta
+cd metabase
+
+#Subir metabase
+docker-compose up
+
+
+porta 3000
+
+

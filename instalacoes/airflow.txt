@@ -1,0 +1,26 @@
+#Documentação do airflow 
+https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
+
+#Criar uma pasta com nome de airflow e entrar nela
+cd airflow
+
+#Criar Docker Compose
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.8.1/docker-compose.yaml'
+
+#Cria uma pasta e faz atualização no arquivo .env
+
+mkdir -p ./dags ./logs ./plugins ./config
+echo -e "AIRFLOW_UID=$(id -u)" > .env
+
+#Subir o airflow
+docker compose up airflow-init
+
+#Subir aiflow
+docker compose up
+
+usario e senha default
+airflow
+airflow
+
+
+#criar arquivo .gitignore

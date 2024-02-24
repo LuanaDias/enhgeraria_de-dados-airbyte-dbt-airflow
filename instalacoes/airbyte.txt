@@ -1,0 +1,18 @@
+#clonar para o git inves de usar o git do airbyte
+https://github.com/airbytehq/airbyte/fork
+
+#Criar uma nova branch para não alterar a master
+nome_pasta
+
+#Clonar repositorio do  git
+git clone -b nome_pasta url_do_git
+
+#Entrar na pasta do airbyte
+cd airbyte
+
+#Na versão atual do airbyte Não tem mais o arquivo .env e nem o arquivo docker-compose esse comando retorna esses arquivos e iniciar o airbyte
+./run-ab-platform.sh
+
+Senha padrão
+airbyte
+password
